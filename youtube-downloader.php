@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Youtube Downloader
  * Description: Плагин позволяет скачать видео с видеохостинга YouTube
- * Version:     1.1
+ * Version:     1.1.2
  * Author:      Alex Lundin
  * Author URI:  https://alexlundin.com
  * License:     GPLv2 or later
@@ -13,10 +13,10 @@
 
 
 require 'plugin-update-checker/plugin-update-checker.php';
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://alexlundin.com/wp-update-server?action=get_metadata&slug=youtube-downloader', //Metadata URL.
-    __FILE__, //Full path to the main plugin file.
-    'youtube-downloader' //Plugin slug. Usually it's the same as the name of the directory.
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/alexlundin/youtube-downloader/',
+	__FILE__,
+	'youtube-downloader'
 );
 
 add_shortcode('youtube-downloader', function () {
